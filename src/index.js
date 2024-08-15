@@ -9,7 +9,7 @@ import db from "./db/db.js";
 import "dotenv/config"; // This loads the .env file
 
 const app = express();
-
+app.use(express.json());
 app.use(
   session({
     secret: process.env.SECRET_KEY,
@@ -27,7 +27,7 @@ app.use(
 
 app.use(
   cors({
-    origin: [process.env.LOCALHOST_CLIENT_URL, process.env.CLIENT_URL],
+    origin: [process.env.LOCAL_CLIENT_URL, process.env.CLIENT_URL],
     credentials: true,
   })
 );
