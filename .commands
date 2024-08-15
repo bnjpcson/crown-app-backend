@@ -1,0 +1,2 @@
+npx knex migrate:make {{migration_name}} --migrations-directory src/db/migrations
+npx knex migrate:latest --knexfile ./src/db/knexfile.cjs

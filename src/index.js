@@ -4,6 +4,10 @@ import cors from "cors";
 
 import auth_route from "./routes/auth_route.js";
 
+import db from "./db/db.js";
+
+import "dotenv/config"; // This loads the .env file
+
 const app = express();
 
 app.use(
